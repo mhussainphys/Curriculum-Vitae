@@ -1,0 +1,263 @@
+%______________________________________________________________________________________________________________________
+% @briefLaTeX2e Resume for Kamil K Wojcicki
+\documentclass[margin,line]{resume}
+\usepackage[colorlinks = true,
+linkcolor = blue,
+urlcolor  = blue,
+citecolor = blue,
+anchorcolor = blue]{hyperref}
+
+\usepackage{fontawesome}
+
+% bibliography with mutiple entries
+\usepackage{multibib}
+\newcites{papers}{\mysidestyle Selected Papers}
+\newcites{talks}{\mysidestyle Selected Talks}
+\newcites{works}{\mysidestyle Selected Works}
+
+\usepackage{etoolbox}
+\BeforeBeginEnvironment{thebibliography}{%
+  \let\origsection\section% save original definition of \section
+  \let\section\subsection%  make \section behave like \subsection
+}
+\AfterEndEnvironment{thebibliography}{%
+  \let\section\origsection% restore original definition of \section
+}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}
+\input{env}
+\fancyhead{}
+\fancyfoot{}
+\lfoot{\hspace{-\sectionwidth}\footnotesize \href{{https://kratsg.github.io/cv/?utm_source=cv}}{\faicon{link}~Giordon Stark's Curriculum Vitae}}
+\rfoot{\footnotesize Built \href{https://travis-ci.org/kratsg/cv/builds/\BUILDNUMBER}{\today}\ from \href{https://github.com/kratsg/cv/tree/\COMMITHASH}{\COMMITHASH}}
+
+\linespread{1.0}
+
+%______________________________________________________________________________________________________________________
+\begin{document}
+\name{\Large Giordon Stark}
+\begin{resume}
+
+%__________________________________________________________________________________________________________________
+% Contact Information
+\section{\mysidestyle Contact\\Information}
+
+Giordon Stark                 \hfill \href{mailto:gstark@cern.ch}{\faicon{envelope}~gstark@cern.ch}
+\vspace{0mm}\\\vspace{0mm}%
+UCSC SCIPP, 1156 High Street  \hfill \href{https://github.com/kratsg}{\faicon{github}~kratsg} {\large\rmfamily\textbullet} \href{https://twitter.com/kratsg}{\faicon{twitter}~kratsg}
+\vspace{0mm}\\\vspace{0mm}%
+Natural Sciences 2, Room \#337       \hfill \href{https://orcid.org/0000-0001-6616-3433}{\faicon{key}~0000-0001-6616-3433}
+\vspace{0mm}\\\vspace{0mm}%
+Santa Cruz, CA \ \ \ 95064\hfill\href{https://giordonstark.com/?utm_source=cv}{https://giordonstark.com/}\\
+\vspace{-6.5mm}%
+
+%__________________________________________________________________________________________________________________
+% Research Interests
+\section{\mysidestyle Research\\Interests}
+{\small
+High Energy Particle Physics, Supersymmetry and Physics Beyond the Standard
+Model, Boosted Object Reconstruction, Hadronic Final States, Jet
+Substructure, Machine Learning, Embedded Hardware, Trigger.
+}
+%__________________________________________________________________________________________________________________
+% Education
+\section{\mysidestyle Education}
+
+\textbf{University of Chicago}, Chicago, Illinois \hfill \textbf{September 2012 -- June 2018}\\
+\textsl{Ph.D. Physics}, David Miller\\[2.5mm]
+%
+\textbf{California Institute of Technology}, Pasadena, California \hfill \textbf{ Sep 2008 -- June 2012}\\
+\textsl{B.S. Physics}, Kenneth Libbrecht and Harvey Newman
+%
+% \textbf{Florida Atlantic University} Boca Raton, Florida \hfill \textbf{Aug 2004 -- June 2008}\\
+% \textsl{Engineering Scholars Program} -- dual-enrollment during high school\\[5mm]
+%
+% \textbf{Suncoast Community High School}, Riviera Beach, Florida \hfill \textbf{Aug 2004 -- Dec 2008}\\
+% \textsl{Math, Science and Engineering Program}
+
+\section{\mysidestyle Dissertation}
+
+\textbf{\textsl{Ph.D.}} \href{https://kratsg.github.io/thesis/?utm_source=cv}{\faicon{link}}~\textsl{The search for supersymmetry in hadronic final states using boosted object reconstruction}
+\textbf{\textsl{B.S.}}\hspace{3mm} \href{https://www.dropbox.com/s/h0mpop96cn563bq/Thesis.pdf?dl=0}{\faicon{link}}~\textsl{Optical Coating Brownian Thermal Noise in Gravitational Wave Detectors}
+
+%__________________________________________________________________________________________________________________
+% Honours and Awards
+\section{\mysidestyle Honours and\\Awards}
+
+Nathan Sugarman Award for Excellence in Graduate Student Research \hfill \textsl{May 2017}\\
+US ATLAS Outstanding Graduate Student Award \hfill \textsl{June 2016}\\
+Young Researchers' Symposium Award for Best Poster Presentation \hfill \textsl{November 2015}\\
+Department of Energy, Office of Science Graduate Student Research \hfill \textsl{Oct. 2015 - Jan. 2016}\\
+UChicago Excellence in Graduate Teaching nominee \hfill \textsl{April 2015}\\
+US LHC Users Association Lightning Round winner \hfill \textsl{November 2014}\\
+UChicago Excellence in Graduate Teaching nominee \hfill \textsl{April 2014}\\
+UChicago Excellence in Graduate Teaching nominee \hfill \textsl{April 2013}\\
+Caltech Excellent TA Award \hfill \textsl{2012}\\
+Edward C. and Alice Stone Fellow \hfill \textsl{June 2010}
+
+%__________________________________________________________________________________________________________________
+% Professional Experience
+\section{\mysidestyle Professional\\Experience}
+
+\textbf{SCIPP}, Santa Cruz, California \hfill \textbf{August 2018 -- present}\\
+\textsl{Post-doctoral Researcher, ATLAS Experiment at CERN}
+\begin{list2}
+  \item Common Dark Matter ASG-RECAST Contact (2019-present): identify, advise, and implement improvements to the analysis preservation effort and liaison between the ATLAS Software Group and the analyses in the Common Dark Matter group
+  \item Supersymmetry Combinations Team Contact (2018-present): providing recommendations for object identification and selection criteria, developing the toolchains necessary to combine analyses, and performing the statistical combinations
+  \item US ATLAS Diversity and Inclusion Committee (2018-present): advise the US ATLAS organization on how to implement recommendations in the Diversity and Inclusion report, which recommendations to implement, and modify practices and procedures to improve the collaboration environment for everyone
+\end{list2}
+
+\newpage
+
+\textbf{UChicago HEP}, Chicago, Illinois \hfill \textbf{November 2013 -- July 2018}\\
+\textsl{Ph.D. Student, ATLAS Experiment at CERN}
+\begin{list2}
+  \item Lead analyzer for new physics search in Supersymmetry with multiple heavy-flavor and large radius jets \cite{SUSY-2016-10, SUSY-2015-10, ATLAS-CONF-2017-021, ATLAS-CONF-2016-052, ATLAS-CONF-2015-067}
+  \item Worked on electronic instrumentation to improve the ATLAS Trigger system in Run 3 and beyond for boosted objects: \href{https://gfex.cern.ch/}{gFEX: global feature extraction} \cite{Tang:2104248, DPF2017gFEX}
+  \item Spearheading the effort for embedded processor design within the ATLAS experiment. This includes developing an OpenEmbedded firmware layer for compiling a linux kernel from scratch to be installed on instrumentation in the ATLAS experiment: \href{https://github.com/kratsg/meta-l1calo}{\faicon{github}~meta-l1calo}
+  \item Investigating jet-area based pile-up suppression techniques applied to jets in the forward region of the ATLAS detector in high pileup environments at HL-LHC \cite{HFSF2017}
+  \item Performing physics studies for the hardware instrumentation as part of the ATLAS detector upgrade work. These studies include identifying subjets from trigger tower information, pileup mitigation techniques, parameterizing trigger efficiency and rates for the online trigger objects I defined, and prototyping a convolutional neural network using the ATLAS calorimeter data as a 2D image to study trigger-level observables \cite{DPF2017gFEX}
+  \item Editor of the gFEX Final Design Report describing the technical requirements and needs of gFEX in the ATLAS Calorimeter ecosystem \cite{Begel:2233958}
+  \item Created and maintain an analysis framework for general physics analyses within ATLAS including Standard Model searches, SUSY, Exotics, Higgs, Trigger-Level analyses, Jet Calibration efforts, and more: \href{https://xaodanahelpers.readthedocs.io/en/master/}{xAODAnaHelpers} \cite{giordon_stark_2015_839037}
+  \item Built a python tool to scan the phase-space of an analysis to identify performant variables to discriminate signal over background: \href{https://github.com/kratsg/Optimization}{root-optimize}
+  \item Developer of a python framework that combines ROOT and NumPy: \href{http://scikit-hep.org/root_numpy/}{root\_numpy} \cite{Noel_Dawe_2017}
+\end{list2}
+
+\textbf{University of Chicago}, Chicago, Illinois \hfill \textbf{June 2012 -- Present}\\
+\textsl{Graduate Student Teaching Assistant}\\
+\textbf{Courses} (teaching materials and reviews available on request)
+\begin{list2}
+  \item PHY211 -- Advanced Physics Laboratory \hfill \textbf{Fall Term 2016-2017}
+  \item PHY225 -- Advanced Electromagnetism \hfill \textbf{Winter Term 2014-2015}
+  \item PHY141 -- Advanced Mechanics \hfill \textbf{Fall Term 2013-2014}
+  \item PHY131 -- Mechanics \hfill \textbf{Summer Term 2012-2013}
+  \item PHY132b -- Special Relativity and Electromagnetism \hfill \textbf{Winter Term 2012-2013}
+  \item PHY121 -- Introductory Mechanics \hfill \textbf{Fall Term 2012-2013}
+\end{list2}
+
+\textbf{University of Chicago}, Chicago, Illinois \hfill \textbf{June 2014 -- Present}\\
+\textsl{Bridge Program Tutor}
+\begin{list2}
+  \item Tutored participants in the program upon request in all currently offered graduate-level Physics courses at University of Chicago
+  \item Bridge program helps enhance diversity in the physics graduate education and also provides a bridge to the \textsl{Ph.D} effort
+\end{list2}
+
+\textbf{University of Chicago}, Chicago, Illinois  \hfill \textbf{June 2012 -- May 2013}\\
+\textsl{Graduate Student Research Assistant} in Ultracold Atomic Physics, \textbf{Supervisor}: Cheng Chin
+\begin{list2}
+  \item Started a project on trapping of water droplets using temperature gradients at room pressure
+\end{list2}
+
+\textbf{Adaptly}, New York City, New York\hfill \textbf{June 2012 -- September 2012}\\
+\textsl{Developer}, \textbf{Supervisors}: Sean Shillo, Will Highduchek
+\begin{list2}
+  \item \url{https://adaptly.com}
+  \item Developed projects and implemented infrastructure for the Adaptly Self-Serve platform
+  \item Worked with ``Big Data'' for a large portion of my time at Adaptly
+\end{list2}
+
+%\textbf{Basic Web Programming}, Caltech \hfill \textbf{Jan 2011 -- June 2012}\\
+%\textsl{Student Instructor}, \textbf{Course Sponsor}: Adam Wierman
+%\begin{list2}
+%  \item \url{http://ugcs.caltech.edu/~kratsg/PA070b} (\textbf{materials available on request})
+%  \item This class was taught during Caltech's Winter Term
+%\end{list2}
+
+\newpage
+
+\textbf{Laser Interferometer Gravitational Observatory}, Caltech \hfill \textbf{Sep 2011 -- June 2012}\\
+\textsl{Research Assistant}, \textbf{Advisor}: Rana Adhikari
+\begin{list2}
+  \item Researching the effects of Brownian Thermal Noise and how it relates to the Quality Factors and Loss Angles of thin-film coated mirrors used in LIGO
+\end{list2}
+
+\textbf{Laser Interferometer Gravitational Observatory}, MIT \hfill \textbf{June 2011 -- Sep 2011}\\
+\textsl{Research Assistant}, \textbf{Advisors}: Sam Waldman, Rai Weiss, Hugo Paris
+\begin{list2}
+  \item Developed control systems for monitoring the state of the LIGO system via multiple physical chassis setups and software collaborations
+  \item Developed software to analyze noise levels in LIGO hardware (capacitative position sensors and various chassis), analyzed noise levels in the hardware to verify its quality before sending it to other LIGO labs in the country
+  \item Worked on the feed-forward systems to minimize mechanical vibrations in the system
+\end{list2}
+
+\textbf{Computational Physics Lab}, Caltech \hfill \textbf{March 2011 -- June 2011}\\
+\textsl{Research Assistant and Computational Specialist}, \textbf{Advisor}: Frank Rice
+\begin{list2}
+  \item Developed a new version of the Caltech's Sophomore Physics Laboratory Mathematica CurveFit program (program is still being developed; \textbf{code/demonstration available upon request})
+\end{list2}
+
+\textbf{Information Systems and Technology}, Caltech \hfill \textbf{March 2011 -- June 2011}\\
+\textsl{Teaching Assistant}, \textbf{Course Instructor}: Shuki Bruck
+\begin{list2}
+  \item Provided 2-hour Office Hour session once a week to assist with homework, answer questions about lectures, and improve students' understanding
+  \item Attended lectures, structured and graded homework assignments for $\sim$ 140 students
+\end{list2}
+
+\textbf{Submillimeter Wave Observatory}, Caltech \hfill \textbf{June 2010 -- Aug 2010}\\
+\textsl{Edward C. and Alice Stone Fellow}, \textbf{Advisors}: Simon Radford and David Miller
+\begin{list2}
+  \item Designed an optical system that couples the beams from a Fourier Transform Spectrometer to a Bolometer, collimated through a sample, to determine the submillimeter transmittivity of optical materials in broadband wavelengths (500 Gigahertz to 3.5 Terahertz)
+  \item Results are employed in the design of more efficient submillimeter instruments around the world
+\end{list2}
+
+%\textbf{Basic Web Programming}, Caltech \hfill \textbf{Mar 2010 -- June 2010}
+%\textsl{Student Instructor}, \textbf{Course Sponsor}: Mani Chandy
+%\begin{list2}
+%  \item \url{http://ugcs.caltech.edu/~kratsg/PA070c} (\textbf{materials available upon request})
+%  \item Taught students to design web pages using HTML, CSS, JavaScript, PHP in combination with javascript libraries and JSON.
+%\end{list2}
+
+%__________________________________________________________________________________________________________________
+% Selected Publications
+\section{\mysidestyle Publications, Talks, and Works}
+\bibliographystylepapers{atlasBibStyleWithTitle}
+\bibliographypapers{papers}
+\nocitepapers{*}
+\bibliographystyletalks{atlasBibStyleWithTitle}
+\bibliographytalks{talks}
+\nocitetalks{SUSY2019, ATLASPnP2018Pileup, HFSF2017, USLUA2017, DPF2017gFEX, BOOST2016}
+\bibliographystyleworks{atlasBibStyleWithTitle}
+\bibliographyworks{works}
+\nociteworks{*}
+
+%__________________________________________________________________________________________________________________
+% Outreach
+\section{\mysidestyle Outreach}
+I am actively involved in many outreach activities for which I donate my time. These activities vary from working at non-profits, to hobbies where I develop free and open-sourced tools, to actual outreach where I describe the work I do in a public setting.
+\begin{list2}
+\item Recorded videos for \href{https://microcosm.web.cern.ch/en}{CERN Microcosm exhibit} in American Sign Language. One of the videos is on \href{https://www.youtube.com/watch?v=BaGjAruqFec}{YouTube}
+  \item Lobbied Senators and Congressmen to support strong funding for U.S. Particle Physics programs, based on the P5 report, in Washington D.C. \url{https://www.usparticlephysics.org/strategy.html}
+  \item Working on SignsFive, an online dictionary for Science, Tech, Engineering, and Math sign language videos to be stored, uploaded, and searched through: \url{http://survey.signsfive.com}
+  \item Developed an application that allows small-budget and non-profit theaters to provide free captioning services for their patrons: \url{https://github.com/kratsg/captionator}
+  \item Organizing and advocating for accessible theater in Chicago: \url{http://www.chicagoplays.com/access.html}
+  \item Volunteering my time to other activists in Chicago who need technical expertise: \url{https://chihacknight.org/}
+\end{list2}
+
+%__________________________________________________________________________________________________________________
+% Languages, Programming, Skills
+\section{\mysidestyle Languages}
+
+American Sign Language, English (bilingual), French Sign Language (elementary), British Sign Language (elementary), Italian Sign Language (elementary), Spanish (elementary), French (elementary)
+
+\section{\mysidestyle \faicon{code}~Programming}
+
+\textsl{Full Stack Developer}, C, C++, Perl, Python, \LaTeXe, MySQL, PHP, JavaScript, JSON, HTML, XHTML, XML, CSS, VHDL, Continuous Integration, Version Control, GitHub/GitLab
+
+\section{\mysidestyle Computing Libraries}
+
+Mathematic, Matlab, COMSOL, ROOT, Keras, scikit-learn, TensorFlow, NumPy, SciPy, root\_numpy, rootpy, PyROOT, Matplotlib, pandas, BitBake/OpenEmbedded, Docker, Git, NodeJS, React, jQuery, Bootstrap
+
+\section{\mysidestyle Skills}
+
+Effective communication, public speaking, collaboration, project management, mentoring, adaptability, flexibility
+
+%__________________________________________________________________________________________________________________
+% Explaining this CV hosted
+% \section{\mysidestyle Continuous Integration}
+%
+% This curriculum vitae was built automatically using continuous integration that ran from a github repository hosting the latex sources. After building the PDF, this is deployed back to github where it is hosted for free as a static website. The links in the footer on every page provide details about the version of the CV you are reading, when it was built, and where the currently hosted version is. Try the links out!
+%
+%______________________________________________________________________________________________________________________
+\end{resume}
+\end{document}
